@@ -5,3 +5,14 @@ html, body {
 canvas {
     display: block;
 }
+.main{
+  margin-top: 25%;
+  margin-left: 45%;
+  .button{
+    margin-left: 5%;
+  }
+  .radio{
+      flex :1;
+      margin-left: 1%;
+    }
+  }

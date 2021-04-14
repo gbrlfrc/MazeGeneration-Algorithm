@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js" integrity="sha512-a5hlZKgpC1LVAuKgVeXdP0D9Yfacj0hLtNdzx9zFMkIWRrQyO37KtIPiqArGmVuaBYu3ON6Vt0N3+G/JaLXQYQ==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js" integrity="sha512-wM+t5MzLiNHl2fwT5rWSXr2JMeymTtixiw2lWyVk1JK/jDM4RBSFoH4J8LjucwlDdY6Mu84Kj0gPXp7rLGaDyA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js" integrity="sha512-a5hlZKgpC1LVAuKgVeXdP0D9Yfacj0hLtNdzx9zFMkIWRrQyO37KtIPiqArGmVuaBYu3ON6Vt0N3+G/JaLXQYQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js" integrity="sha512-wM+t5MzLiNHl2fwT5rWSXr2JMeymTtixiw2lWyVk1JK/jDM4RBSFoH4J8LjucwlDdY6Mu84Kj0gPXp7rLGaDyA==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/main.css">
 
-        <title>Maze Generation</title>
-    </head>
+</head>
     <body>
-        <script src='./src/index.js'></script>
-        <script src='./src/Cell.js'></script>
-        <script src='./src/utils.js'></script>
+        <script>
+            const run = () => {
+                let value = $("input[type='radio'][name='shape']:checked").val();
+                let url=window.location.href.split('/');
+                window.location.href = url[0]+'//'+url[2]+'/'+'run.html'+'?shape='+value;
+            }
+        </script>
+        <div class="main">
+            <div class='radio'>
+                <input type="radio" name="shape" value="square"><label for="shape">square</label>
+                <input type="radio" name="shape" value="triangle"><label for="shape">triangle</label>
+            </div>
+            <div class='button'>
+                <input type='submit' value='start' onclick="run()"></input>
+            </div>
+        </div>
     </body>
 </html>
